@@ -8,26 +8,26 @@ counter=0;
 // next button
 next.addEventListener('click', slideNext);
 function slideNext(){
-    slideImages[counter].style.animation= 'next1 0.5s ease-in forwards';
+    slideImages[counter].style.animation= 'next1 0.8s ease-in forwards';
     if(counter >= slideImages.length-1){
         counter=0;
     } else{
         counter++;
     }
-    slideImages[counter].style.animation= 'next2 0.5s ease-in forwards';
+    slideImages[counter].style.animation= 'next2 0.8s ease-in forwards';
     indicators();
 }
 
 // prev button
 prev.addEventListener('click', slidePrev);
 function slidePrev(){
-    slideImages[counter].style.animation= 'prev1 0.5s ease-in forwards';
+    slideImages[counter].style.animation= 'prev1 0.8s ease-in forwards';
     if(counter == 0 ){
         counter= slideImages.length-1;
     } else{
         counter--;
     }
-    slideImages[counter].style.animation= 'prev2 0.5s ease-in forwards';
+    slideImages[counter].style.animation= 'prev2 0.8s ease-in forwards';
     indicators();
 }
 
@@ -63,15 +63,15 @@ function switchImage(currentImage){
     currentImage.classList.add('active');
     var imageId = currentImage.getAttribute('attr');
     if(imageId > counter){
-        slideImages[counter].style.animation= 'next1 0.5s ease-in forwards';
+        slideImages[counter].style.animation= 'next1 0.8s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation= 'next2 0.5s ease-in forwards';
+        slideImages[counter].style.animation= 'next2 0.8s ease-in forwards';
     } else if(imageId == counter){
         return;
     } else{
-        slideImages[counter].style.animation= 'prev1 0.5s ease-in forwards';
+        slideImages[counter].style.animation= 'prev1 0.8s ease-in forwards';
         counter = imageId;
-        slideImages[counter].style.animation= 'prev2 0.5s ease-in forwards';
+        slideImages[counter].style.animation= 'prev2 0.8s ease-in forwards';
     }
     indicators();
 }
