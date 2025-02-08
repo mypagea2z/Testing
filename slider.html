@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <link rel="stylesheet" href="styleone.css">
+</head>
+<body>
+
+    <!-- slide container -->
+    <div class="slide-container">
+        <!--  slides-->
+        <div class="slides">
+            <img src="1.jpg" alt="image" class="active">
+            <img src="2.jpg" alt="image">
+            <img src="3.jpg" alt="image">
+            <img src="4.jpg" alt="image">
+            <img src="5.jpg" alt="image">
+        </div>
+        
+        <!-- buttons -->
+        <div class="buttons">
+            <span class="next">&#10095;</span>
+            <span class="prev">&#10094;</span>
+        </div>
+
+        <!-- dots container - indicators     -->
+         <div class="dotsContainer">
+            <div class="dot active" attr="0" onclick="switchImage(this)" ></div>
+            <div class="dot" attr="1" onclick="switchImage(this)" ></div>
+            <div class="dot" attr="2" onclick="switchImage(this)" ></div>
+            <div class="dot" attr="3" onclick="switchImage(this)" ></div>
+            <div class="dot" attr="4" onclick="switchImage(this)" ></div>
+         </div>
+    </div>
+    <script src="slider.js"></script>
+</body>
+</html>
